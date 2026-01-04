@@ -2,7 +2,6 @@
 
 # If needed in a fresh environment, first install:
 # !pip install -q transformers datasets evaluate accelerate
-
 from datasets import load_dataset
 from transformers import (
     AutoTokenizer,
@@ -160,3 +159,4 @@ def summarize(text, max_new_tokens=80, num_beams=4):
 example_article = small_val[0]["article"]
 print("ORIGINAL ARTICLE:\n", example_article[:800], "...\n")
 print("MODEL SUMMARY:\n", summarize(example_article))
+
